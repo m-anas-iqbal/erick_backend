@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\Feeds;
 use Illuminate\Support\Facades\Crypt;
 use App\Helper\Helper; // Import the Helper class
 
@@ -15,12 +16,8 @@ class DashboardController extends Controller
     }
     public function clientDashboard()
     {
-        if (condition) {
-            $data['feeds'] = Feeds::where("status",1)->get();
+        $data['feeds'] =   $feeds = Feeds::paginate(10);
         return view('vendor.dashboard',$data);
-        }
-        return route('dashboard');
-
     }
     public function adminDashboard()
     {

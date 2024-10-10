@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FeedController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\HomeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,11 +16,10 @@ use App\Http\Controllers\DashboardController;
 |
 */
 
-Auth::routes();
+Auth::routes(['register' => false]);
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/feeds/create', [FeedController::class, 'create'])->name('feeds.create');
-Route::post('/feeds', [FeedController::class, 'store'])->name('feeds.store');
+Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/login', [HomeController::class, 'index'])->name('login');
 
 Route::group(['prefix' => 'admin', 'as' => '', 'middleware' => ['auth']], function ()
 {
@@ -47,7 +47,7 @@ Route::delete('feeds/{id}', [FeedController::class, 'destroy'])->name('feeds.des
 
 Route::group(['prefix' => 'vendor', 'as' => '', 'middleware' => ['auth']], function ()
 {
-    Route::get('/dashboard', [DashboardController::class, 'adminDashboard'])->name('dashboard');
+    Route::get('/dashboard', [DashboardController::class, 'clientDashboard'])->name('dashboard');
 });
 
     Route::group(['middleware' => ['auth']], function () {

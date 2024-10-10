@@ -50,13 +50,13 @@
                                 <small>Leave blank if you don't want to change it</small>
                             </div>
 
-                            <div class="mb-3">
+                            {{-- <div class="mb-3">
                                 <label class="col-form-label">Role</label>
                                 <select class="form-control" name="role_id" required>
                                     <option value="1" {{ $user->role_id == 1 ? 'selected' : '' }}>Admin</option>
                                     <option value="2" {{ $user->role_id == 2 ? 'selected' : '' }}>Vendor</option>
                                 </select>
-                            </div>
+                            </div> --}}
 
                             <div class="mb-3">
                                 <label class="col-form-label">Status</label>

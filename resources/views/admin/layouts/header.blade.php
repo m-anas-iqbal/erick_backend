@@ -37,8 +37,18 @@
                         </div>
                     </div>
                     <ul class="profile-dropdown onhover-show-div">
-                        <li><a href="{{ url('/profile/edit/' . \Crypt::encrypt(1)) }}"><i data-feather="settings"></i><span>Settings</span></a></li>
-                        <li><a href="{{url('admin/logout')}}"><i data-feather="log-in"> </i><span>Log Out</span></a></li>
+                        <li><a href="{{ url('/profile/edit/' . \Crypt::encrypt(1)) }}"><i data-feather="settings"></i><span>Profile</span></a></li>
+                        <li>
+                            <a  href="{{ route('logout') }}"
+                               onclick="event.preventDefault();
+                                             document.getElementById('logout-form').submit();"><i data-feather="log-in"> </i>
+                                {{ __('Logout') }}
+                            </a>
+
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                @csrf
+                            </form>
+                        </li>
                     </ul>
                 </li>
             </ul>

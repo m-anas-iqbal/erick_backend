@@ -46,7 +46,7 @@
                         <div><a class="logo" href="/"><img style="width: 250px" class="img-fluid"
                                     src="http://carrental.arm-sc.com/wp-content/uploads/sites/28/2022/12/logo.png" alt="looginpage"></a></div>
                         <div class="login-main">
-                            <form class="theme-form" action="{{route('login_post')}}" method="POST">
+                            <form class="theme-form" action="{{route('login')}}" method="POST">
                                 @csrf
 
                                 <h4>Sign in to account</h4>
@@ -62,6 +62,11 @@
                                     <label class="col-form-label">Email Address</label>
                                     <input class="form-control" name="email" type="text" required=""
                                         placeholder="Abc123">
+                                        @error('email')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
                                 </div>
                                 <div class="form-group">
                                     <label class="col-form-label">Password</label>
@@ -70,12 +75,25 @@
                                             placeholder="*********">
                                         <div class="show-hide"><span class="show"> </span></div>
                                     </div>
+                                    @error('password')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                                 </div>
                                 <div class="form-group mb-0">
                                     <div class="checkbox p-0">
-                                        <input id="checkbox1" type="checkbox">
-                                        {{-- <label class="text-muted" for="checkbox1">Remember password</label> --}}
-                                        {{-- </div><a class="link" href="forget-password.html">Forgot password?</a> --}}
+                                        <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+
+                                    <label class="form-check-label text-muted" for="remember">
+                                        {{ __('Remember Me') }}
+                                    </label>
+                                        </div>
+                                        @if (Route::has('password.request'))
+                                        <a class="link" href="{{ route('password.request') }}">
+                                            {{ __('Forgot Your Password?') }}
+                                        </a>
+                                    @endif
                                         <div class="text-end mt-3">
                                             <button class="btn btn-primary btn-block w-100" type="submit">Sign
                                                 in</button>

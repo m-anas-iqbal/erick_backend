@@ -38,7 +38,7 @@ class UserController extends Controller
             'email' => 'required|email|unique:users,email',
             'password' => 'required|string|min:8',
             'image' => 'nullable|image|mimes:jpeg,png,jpg,gif',
-            'role_id' => 'required',
+            // 'role_id' => 'required',
             'status' => 'required',
         ]);
 
@@ -56,7 +56,8 @@ class UserController extends Controller
             'last_name' => $request->last_name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
-            'role_id' => $request->role_id,
+            // 'role_id' => $request->role_id,
+            'role_id' => 2,
             'status' => $request->status,
             'image' => $imageName,
         ]);
@@ -84,7 +85,7 @@ class UserController extends Controller
             'email' => 'required|email|unique:users,email,' . $id,
             'password' => 'nullable|string|min:8',
             'image' => 'nullable|image|mimes:jpeg,png,jpg,gif',
-            'role_id' => 'required',
+            // 'role_id' => 'required',
             'status' => 'required',
         ]);
 
@@ -102,7 +103,7 @@ class UserController extends Controller
         if ($request->password) {
             $user->password = Hash::make($request->password);
         }
-        $user->role_id = $request->role_id;
+        // $user->role_id = $request->role_id;
         $user->status = $request->status;
         $user->save();
 

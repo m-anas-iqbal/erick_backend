@@ -48,13 +48,13 @@
                                 <input type="password" class="form-control" name="password" required>
                             </div>
 
-                            <div class="mb-3">
+                            {{-- <div class="mb-3">
                                 <label class="col-form-label">Role</label>
                                 <select class="form-control" name="role_id" required>
                                     <option value="1">Admin</option>
                                     <option value="2">Vendor</option>
                                 </select>
-                            </div>
+                            </div> --}}
 
                             <div class="mb-3">
                                 <label class="col-form-label">Status</label>
