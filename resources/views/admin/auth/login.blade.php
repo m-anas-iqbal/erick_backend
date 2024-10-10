@@ -60,8 +60,8 @@
                                 @endif
                                 <div class="form-group">
                                     <label class="col-form-label">Email Address</label>
-                                    <input class="form-control" name="email" type="text" required=""
-                                        placeholder="Abc123">
+                                    <input type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus
+                                        placeholder="Abc123@sad.ad">
                                         @error('email')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
@@ -71,7 +71,7 @@
                                 <div class="form-group">
                                     <label class="col-form-label">Password</label>
                                     <div class="form-input position-relative">
-                                        <input class="form-control" name="password" type="password" required=""
+                                        <input class="form-control @error('password') is-invalid @enderror" name="password" type="password" required autocomplete="current-password"
                                             placeholder="*********">
                                         <div class="show-hide"><span class="show"> </span></div>
                                     </div>
