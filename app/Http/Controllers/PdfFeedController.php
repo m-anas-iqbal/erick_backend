@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Feeds;
+use App\Models\PdfFeed;
 use Illuminate\Http\Request;
 use App\Helper\Helper; // Import the Helper class
 
-class FeedController extends Controller
+class PdfFeedController extends Controller
 {
     public function __construct()
     {
@@ -18,8 +18,8 @@ class FeedController extends Controller
      */
     public function index()
     {
-        $feeds = Feeds::all();
-        return view('admin.pages.feeds.list', compact('feeds'));
+        $pdf = PdfFeed::all();
+        return view('admin.pages.pdf.list', compact('pdf'));
     }
 
     /**
@@ -27,7 +27,7 @@ class FeedController extends Controller
      */
     public function create()
     {
-        return view('admin.pages.feeds.add');
+        return view('admin.pages.pdf.add');
     }
 
     /**
@@ -41,18 +41,18 @@ class FeedController extends Controller
         $validated = $request->validate([
             'title' => 'nullable|string|max:255',
             'status' => 'nullable|string',
-            'video' => 'required|file|mimetypes:video/mp4,video/x-msvideo,video/x-matroska', // Video is required
+            'pdf' => 'required|file|mimetypes:application/pdf', // PDF is optional
             // 'extra' => 'nullable|string',
             'description' => 'nullable|string',
         ]);
         // Handle video upload
-        if ($request->hasFile('video')) {
-            $videoPath = Helper::upload_video($request, 'video', 'feeds/videos');
-            $validated['video'] = $videoPath; // Store the video path in the validated data
+        if ($request->hasFile('pdf')) {
+            $videoPath = Helper::upload_video($request, 'pdf', 'feeds/pdf');
+            $validated['pdf'] = $videoPath; // Store the video path in the validated data
         }
-        Feeds::create($validated);
+        PdfFeed::create($validated);
 
-        return redirect()->route('feeds.index')->with('green', 'Feed added successfully!');
+        return redirect()->route('pdf.index')->with('green', 'PDF added successfully!');
     }
 
     /**
@@ -60,8 +60,8 @@ class FeedController extends Controller
      */
     public function edit($id)
     {
-        $feed = Feeds::findOrFail($id);
-        return view('admin.pages.feeds.edit', compact('feed'));
+        $pdf = PdfFeed::findOrFail($id);
+        return view('admin.pages.pdf.edit', compact('pdf'));
     }
 
     /**
@@ -73,21 +73,21 @@ class FeedController extends Controller
         $validated = $request->validate([
             'title' => 'nullable|string|max:255',
             'status' => 'nullable|string',
-            'video' => 'nullable|file|mimetypes:video/mp4,video/x-msvideo,video/x-matroska', // Video is required
+          'pdf' => 'nullable|file|mimetypes:application/pdf', // PDF is optional
             // 'extra' => 'nullable|string',
             'description' => 'nullable|string',
         ]);
 
         // Handle the video upload
-        if ($request->hasFile('video')) {
-            $videoPath = Helper::upload_video($request, 'video', 'feeds/videos');
-            $validated['video'] = $videoPath; // Store the new video path
+        if ($request->hasFile('pdf')) {
+            $videoPath = Helper::upload_video($request, 'pdf', 'feeds/pdf');
+            $validated['pdf'] = $videoPath; // Store the new video path
         }
 
-        $feed = Feeds::findOrFail($id);
-        $feed->update($validated);
+        $pdf = PdfFeed::findOrFail($id);
+        $pdf->update($validated);
 
-        return redirect()->route('feeds.index')->with('green', 'Feed updated successfully!');
+        return redirect()->route('pdf.index')->with('green', 'PDF updated successfully!');
     }
 
     /**
@@ -95,9 +95,9 @@ class FeedController extends Controller
      */
     public function destroy($id)
     {
-        $feed = Feeds::findOrFail($id);
-        $feed->delete();
+        $pdf = PdfFeed::findOrFail($id);
+        $pdf->delete();
 
-        return redirect()->route('feeds.index')->with('green', 'Feed deleted successfully!');
+        return redirect()->route('pdf.index')->with('green', 'PDF deleted successfully!');
     }
 }

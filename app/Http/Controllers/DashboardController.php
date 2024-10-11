@@ -5,6 +5,10 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Feeds;
+use App\Models\PdfFeed;
+use App\Models\Qoutation;
+use App\Models\Newsletter;
+use App\Models\Contactus;
 use Illuminate\Support\Facades\Crypt;
 use App\Helper\Helper; // Import the Helper class
 
@@ -16,8 +20,13 @@ class DashboardController extends Controller
     }
     public function clientDashboard()
     {
-        $data['feeds'] =   $feeds = Feeds::paginate(10);
+        $data['feeds'] = Feeds::where('status',1)->paginate(10);
         return view('vendor.dashboard',$data);
+    }
+    public function pdf()
+    {
+        $data['pdf'] =   PdfFeed::where('status',1)->paginate(10);
+        return view('vendor.pdfs',$data);
     }
     public function adminDashboard()
     {
@@ -69,5 +78,19 @@ class DashboardController extends Controller
         // Redirect to the profile page
         return redirect('profile/edit/'.$request->id);
     }
-
+    public function contact()
+    {
+        $contactus = Contactus::orderBy('id','desc')->get(); // Adjust pagination as needed
+        return view('admin.pages.contact.list', compact('contactus'));
+    }
+    public function newsletter()
+    {
+        $newsletters = Newsletter::orderBy('id','desc')->get(); // Adjust pagination as needed
+        return view('admin.pages.newsletter.list', compact('newsletters'));
+    }
+    public function qoutation()
+    {
+        $qoutations = Qoutation::orderBy('id','desc')->get(); // Adjust pagination as needed
+        return view('admin.pages.qoutation.list', compact('qoutations'));
+    }
 }

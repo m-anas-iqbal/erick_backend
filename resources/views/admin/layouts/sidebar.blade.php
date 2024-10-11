@@ -80,11 +80,46 @@
 
                         </a>
                     </li>
+                    <li class="sidebar-list">
+                        <label class="badge badge-success"></label><a
+                            class="sidebar-link sidebar-title {{ request()->route()->uri == '/admin/pdf' ? 'active1' : '' }}"
+                            href="{{ url('/admin/pdf') }}"> <span class="lan-3">&nbsp&nbsp PDF Managment</span>
+
+                        </a>
+                    </li>
+                    <!-- Quotation Sidebar Link -->
+                    <li class="sidebar-list">
+                        <a class="sidebar-link sidebar-title {{ request()->route()->getName() == 'qoutation' ? 'active1' : '' }}" href="{{ route('qoutation') }}">
+                            <span class="lan-3">&nbsp;&nbsp; Quotations</span>
+                        </a>
+                    </li>
+
+                    <!-- Newsletter Sidebar Link -->
+                    <li class="sidebar-list">
+                        <a class="sidebar-link sidebar-title {{ request()->route()->getName() == 'newsletter' ? 'active1' : '' }}" href="{{ route('newsletter') }}">
+                            <span class="lan-3">&nbsp;&nbsp; Newsletters</span>
+                        </a>
+                    </li>
+
+                    <!-- Contact Sidebar Link -->
+                    <li class="sidebar-list">
+                        <a class="sidebar-link sidebar-title {{ request()->route()->getName() == 'contact' ? 'active1' : '' }}" href="{{ route('contact') }}">
+                            <span class="lan-3">&nbsp;&nbsp; Contact us</span>
+                        </a>
+                    </li>
+
                     @else
                     <li class="sidebar-list">
                         <label class="badge badge-success"></label><a
-                            class="sidebar-link sidebar-title {{ request()->route()->uri == 'vendor/dashboard' ? 'active1' : '' }}"
-                            href="{{ url('/vendor/dashboard')}}"> <span class="lan-3">&nbsp&nbspDashboard</span>
+                            class="sidebar-link sidebar-title {{ request()->route()->uri == 'vendor/video' ? 'active1' : '' }}"
+                            href="{{ url('/vendor/video')}}"> <span class="lan-3">&nbsp&nbspVideo</span>
+
+                        </a>
+                    </li>
+                    <li class="sidebar-list">
+                        <label class="badge badge-success"></label><a
+                            class="sidebar-link sidebar-title {{ request()->route()->uri == 'vendor/pdf' ? 'active1' : '' }}"
+                            href="{{ url('/vendor/pdf')}}"> <span class="lan-3">&nbsp&nbspPDF</span>
 
                         </a>
                     </li>

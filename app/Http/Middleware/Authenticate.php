@@ -14,20 +14,12 @@ class Authenticate extends Middleware
      */
     protected function redirectTo($request)
     {
-        if (! $request->expectsJson()) {
-            if (auth()->check()) {
-                if (auth()->user()->role_id == 1) {
-                    return route('admin.dashboard');
-                }
-                if (auth()->user()->role_id == 2) {
-                    return route('vendor.dashboard');
-                }
-            }
-                return route('login');
-
-
-
-
+        if (!$request->expectsJson()) {
+            // If the user is not authenticated, redirect to login
+            return route('login');
         }
+
+        // In case of an API request, return null (to avoid redirecting)
+        return null;
     }
 }
