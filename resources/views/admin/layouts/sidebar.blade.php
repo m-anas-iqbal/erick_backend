@@ -41,29 +41,19 @@
 </style>
 <div class="sidebar-wrapper">
     <div>
-        <div class="logo-wrapper">
-            <a style="font-weight:900; text-decoration: none" href="{{ url('/') }}" class=" row justify-content-center">Brewery</a>
-            <div class="back-btn"><i class="fa fa-angle-left"></i></div>
-            <div class="toggle-sidebar"><i class="status_toggle middle sidebar-toggle" data-feather="grid"> </i></div>
+        <div class="logo-wrapper d-flex justify-content-center">
+            <img src="{{asset('images/logo/logo-icon.png')}}" alt="" class="img-fluid">
         </div>
-        <div class="logo-icon-wrapper"><a style="font-weight:900;color: #ec3223;text-decoration: none" href="{{ url('/') }}">Brewery</a></div>
-        <nav class="sidebar-main">
+        <nav class="sidebar-main mt-5">
             <div class="left-arrow" id="left-arrow"><i data-feather="arrow-left"></i></div>
             <div id="sidebar-menu">
-                <ul class="sidebar-links" id="simple-bar">
+                <ul class="sidebar-links mt-5" id="simple-bar">
                     <li class="back-btn">
                         <a style="font-weight:900;color: #ec3223;text-decoration: none" href="{{ url('/') }}">Brewery</a>
                         <div class="mobile-back text-end"><span>Back</span><i class="fa fa-angle-right ps-2"
                                 aria-hidden="true"></i></div>
                     </li>
                     @if (auth()->user()->role_id == 1)
-                    <li class="sidebar-list">
-                        <label class="badge badge-success"></label><a
-                            class="sidebar-link sidebar-title {{ request()->route()->uri == 'admin/dashboard' ? 'active1' : '' }}"
-                            href="{{ url('/admin/dashboard')}}"> <span class="lan-3">&nbsp&nbspDashboard</span>
-
-                        </a>
-                    </li>
 
                     <li class="sidebar-list">
                         <label class="badge badge-success"></label><a

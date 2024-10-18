@@ -1,4 +1,10 @@
+<style>
+    .active1 .lan-3{
+    color: #fff !important;
+}
+</style>
 <div class="page-header">
+
     <div class="header-wrapper row m-0">
         <form class="form-inline search-full col" action="#" method="get">
             <div class="mb-3 w-100">
@@ -27,13 +33,13 @@
         <div class="nav-right col-8 pull-right right-header p-0">
             <ul class="nav-menus">
 
-                <li class="maximize"><a class="text-dark" href="#!" onclick="javascript:toggleFullScreen()"><i
+                <li class="maximize"><a class="text-light" href="#!" style="filter: invert(1)" onclick="javascript:toggleFullScreen()"><i
                             data-feather="maximize"></i></a></li>
                 <li class="profile-nav onhover-dropdown p-0 me-0">
                     <div class="media profile-media">
                         <div class="media-body">
                             <span>{{auth()->user()->name}}</span>
-                            <p class="mb-0 font-roboto">{{auth()->user()->email}} <i class="middle fa fa-angle-down"></i></p>
+                            <p class="mb-0 font-roboto text-light">{{auth()->user()->email}} <i class="middle fa fa-angle-down icon_down" ></i></p>
                         </div>
                     </div>
                     <ul class="profile-dropdown onhover-show-div">
