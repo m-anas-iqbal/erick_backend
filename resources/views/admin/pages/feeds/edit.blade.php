@@ -57,7 +57,7 @@
 
                             <div class="mb-3">
                                 <label class="col-form-label">Video</label>
-                                <input type="file" class="form-control" name="video" accept="video/*">
+                                <input type="file" class="form-control" name="video" accept="video/mp4,video/webm,video/ogg">
                                 @if($feed->video)
                                     <small>Current Video: <a href="{{ $feed->video }}" target="_blank">View Video</a></small>
                                 @endif

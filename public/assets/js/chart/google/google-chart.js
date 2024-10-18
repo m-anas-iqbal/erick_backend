@@ -66,7 +66,7 @@ function drawBasic() {
         title: 'My Daily Activities',
         width:'100%',
         height: 300,
-       colors: ["#f8d62b", "#51bb25" , "#a927f9"  , CubaAdminConfig.secondary , CubaAdminConfig.primary ]
+       colors: ["#e1a729", "#51bb25" , "#a927f9"  , CubaAdminConfig.secondary , CubaAdminConfig.primary ]
       };
       var chart = new google.visualization.PieChart(document.getElementById('pie-chart1'));
       chart.draw(data, options);
@@ -85,7 +85,7 @@ function drawBasic() {
         is3D: true,
         width:'100%',
         height: 300,
-        colors: ["#f8d62b", "#a927f9" , "#51bb25", CubaAdminConfig.secondary , CubaAdminConfig.primary ]
+        colors: ["#e1a729", "#a927f9" , "#51bb25", CubaAdminConfig.secondary , CubaAdminConfig.primary ]
       };
       var chart = new google.visualization.PieChart(document.getElementById('pie-chart2'));
       chart.draw(data, options);
@@ -104,7 +104,7 @@ function drawBasic() {
         pieHole: 0.4,
         width:'100%',
         height: 300,
-        colors: ["#f8d62b", "#a927f9", "#51bb25", CubaAdminConfig.secondary , CubaAdminConfig.primary]
+        colors: ["#e1a729", "#a927f9", "#51bb25", CubaAdminConfig.secondary , CubaAdminConfig.primary]
       };
       var chart = new google.visualization.PieChart(document.getElementById('pie-chart3'));
       chart.draw(data, options);
@@ -146,7 +146,7 @@ function drawBasic() {
           14: {offset: 0.4},
           15: {offset: 0.5},
         },
-          colors: ["#dc3545", CubaAdminConfig.primary , CubaAdminConfig.secondary , "#51bb25", "#a927f9", "#f8d62b","#dc3545", CubaAdminConfig.primary , "#f8d62b", "#51bb25", CubaAdminConfig.primary , CubaAdminConfig.secondary ,"#51bb25", CubaAdminConfig.primary , "#a927f9", "#f8d62b", CubaAdminConfig.primary , CubaAdminConfig.primary, "#a927f9", CubaAdminConfig.secondary , CubaAdminConfig.primary , "#51bb25"]
+          colors: ["#dc3545", CubaAdminConfig.primary , CubaAdminConfig.secondary , "#51bb25", "#a927f9", "#e1a729","#dc3545", CubaAdminConfig.primary , "#e1a729", "#51bb25", CubaAdminConfig.primary , CubaAdminConfig.secondary ,"#51bb25", CubaAdminConfig.primary , "#a927f9", "#e1a729", CubaAdminConfig.primary , CubaAdminConfig.primary, "#a927f9", CubaAdminConfig.secondary , CubaAdminConfig.primary , "#51bb25"]
         };
         var chart = new google.visualization.PieChart(document.getElementById('pie-chart4'));
         chart.draw(data, options);
@@ -200,7 +200,7 @@ function drawBasic() {
         series: {5: {type: 'line'}},
         height: 500,
         width:'100%',
-        colors: [CubaAdminConfig.primary, CubaAdminConfig.secondary , "#51bb25", "#a927f9", "#f8d62b"]
+        colors: [CubaAdminConfig.primary, CubaAdminConfig.secondary , "#51bb25", "#a927f9", "#e1a729"]
     };
     var chart = new google.visualization.ComboChart(document.getElementById('combo-chart'));
     chart.draw(data, options);
@@ -238,7 +238,7 @@ function drawBasic() {
       vAxis: {minValue: 0},
       width:'100%',
       height: 400,
-      colors: [CubaAdminConfig.primary , CubaAdminConfig.secondary , "#51bb25", "#f8d62b"]
+      colors: [CubaAdminConfig.primary , CubaAdminConfig.secondary , "#51bb25", "#e1a729"]
     };
     var chart = new google.visualization.AreaChart(document.getElementById('area-chart2'));
     chart.draw(data, options);
@@ -249,7 +249,7 @@ function drawBasic() {
                     role: "style"
                 }],
                 ["Copper", 10, "#a927f9"],
-                ["Silver", 12, "#f8d62b"],
+                ["Silver", 12, "#e1a729"],
                 ["Gold", 14, "#f73164"],
                 ["Platinum", 16, "color: #7366ff"]
             ]),

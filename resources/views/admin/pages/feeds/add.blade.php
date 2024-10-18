@@ -56,7 +56,7 @@
 
                             <div class="mb-3">
                                 <label class="col-form-label">Video</label>
-                                <input type="file" class="form-control" name="video" accept="video/*" required>
+                                <input type="file" class="form-control" name="video" accept="video/mp4,video/webm,video/ogg" required>
                             </div>
 
                             <button type="submit" class="btn btn-primary">Add Feed</button>

@@ -78,8 +78,8 @@ var polarData = [
         label: "Yellow"
     }, {
         value: 50,
-        color: "#f8d62b",
-        highlight: "#f8d62b",
+        color: "#e1a729",
+        highlight: "#e1a729",
         label: "Sky"
     }, {
         value: 100,

@@ -49,11 +49,19 @@
             <div id="sidebar-menu">
                 <ul class="sidebar-links mt-5" id="simple-bar">
                     <li class="back-btn">
-                        <a style="font-weight:900;color: #ec3223;text-decoration: none" href="{{ url('/') }}">Brewery</a>
+                        <a style="font-weight:900;color: #ec3223;text-decoration: none" href="{{ url('/') }}">Elite National Benefits</a>
                         <div class="mobile-back text-end"><span>Back</span><i class="fa fa-angle-right ps-2"
                                 aria-hidden="true"></i></div>
                     </li>
                     @if (auth()->user()->role_id == 1)
+
+                    <li class="sidebar-list">
+                        <label class="badge badge-success"></label><a
+                            class="sidebar-link sidebar-title {{ request()->route()->uri == 'admin/dashboard' ? 'active1' : '' }}"
+                            href="{{ url('/admin/dashboard') }}"> <span class="lan-3">&nbsp&nbsp Dashboard</span>
+
+                        </a>
+                    </li>
 
                     <li class="sidebar-list">
                         <label class="badge badge-success"></label><a
@@ -94,7 +102,7 @@
                     <!-- Contact Sidebar Link -->
                     <li class="sidebar-list">
                         <a class="sidebar-link sidebar-title {{ request()->route()->getName() == 'contact' ? 'active1' : '' }}" href="{{ route('contact') }}">
-                            <span class="lan-3">&nbsp;&nbsp; Contact us</span>
+                            <span class="lan-3">&nbsp;&nbsp; Contact Forms</span>
                         </a>
                     </li>
 

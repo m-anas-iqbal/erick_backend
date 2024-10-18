@@ -30,7 +30,13 @@ class DashboardController extends Controller
     }
     public function adminDashboard()
     {
-        return view('admin.pages.dashboard');
+        $data['feedsCount'] = Feeds::count();
+        $data['pdfCount'] =   PdfFeed::count();
+        $data['userCount'] = User::where('role_id',2)->count();
+        $data['contactCount'] = Contactus::count();
+        $data['qoutationCount'] = Qoutation::count();
+        $data['newsletterCount'] = Newsletter::count();
+        return view('admin.pages.dashboard' ,$data);
     }
         // profile_edit
     public function profile_edit($id)

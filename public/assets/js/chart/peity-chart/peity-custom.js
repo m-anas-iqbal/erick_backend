@@ -45,7 +45,7 @@ $(".bar-colours-3").peity("bar", {
 })
 
 $(".pie-colours-1").peity("pie", {
-  fill: [CubaAdminConfig.primary , CubaAdminConfig.secondary, "#51bb25" , "#f8d62b"],
+  fill: [CubaAdminConfig.primary , CubaAdminConfig.secondary, "#51bb25" , "#e1a729"],
   width: '100',
   height: '82'
 })

@@ -1,5 +1,5 @@
 @extends('admin.layouts.master')
-@section('title', 'User List')
+@section('title', 'Users')
 
 @section('content')
     <div class="container-fluid">
@@ -13,8 +13,10 @@
             <div class="col-sm-12">
                 <div class="card">
                     <div class="card-header">
-                        <h5>User List</h5>
+                        <div class="d-flex justify-content-between">
+                        <h5>Users</h5>
                         <a href="{{ route('users.create') }}" class="btn btn-primary float-right">Add User</a>
+                    </div>
                     </div>
                     <div class="card-body">
                         <table class="table">
@@ -25,7 +27,7 @@
                                     <th>Email</th>
                                     <th>Role</th>
                                     <th>Status</th>
-                                    <th>Actions</th>
+                                    <th class="text-center">Actions</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -36,7 +38,7 @@
                                         <td>{{ $user->email }}</td>
                                         <td>{{ $user->role_id == 1 ? 'Admin' : 'Vendor' }}</td>
                                         <td>{{  $user->status == 1 ? 'Active' : 'Inactive'}}</td>
-                                        <td>
+                                        <td class="d-flex justify-content-center gap-2">
                                             <a href="{{ route('users.edit', $user->id) }}" class="btn btn-warning">Edit</a>
                                             <form action="{{ route('users.destroy', $user->id) }}" method="POST" style="display:inline;">
                                                 @csrf
@@ -49,6 +51,8 @@
                             </tbody>
                         </table>
                     </div>
+                   
+
                 </div>
             </div>
         </div>

@@ -1713,7 +1713,7 @@ var options = {
     stroke: {
         width: 0
     },
-    colors:[ CubaAdminConfig.primary , CubaAdminConfig.secondary , '#51bb25', '#f8d62b']
+    colors:[ CubaAdminConfig.primary , CubaAdminConfig.secondary , '#51bb25', '#e1a729']
 }
 
 var chart = new ApexCharts(
@@ -2273,7 +2273,7 @@ var options8 = {
             }
         }
     }],
-    colors:[ CubaAdminConfig.primary , CubaAdminConfig.secondary , '#51bb25', '#a927f9', '#f8d62b']
+    colors:[ CubaAdminConfig.primary , CubaAdminConfig.secondary , '#51bb25', '#a927f9', '#e1a729']
 }
 
 var chart8 = new ApexCharts(
@@ -2301,7 +2301,7 @@ var options9 = {
             }
         }
     }],
-    colors:['#dc3545', '#f8d62b', CubaAdminConfig.primary , '#51bb25', '#a927f9']
+    colors:['#dc3545', '#e1a729', CubaAdminConfig.primary , '#51bb25', '#a927f9']
 }
 
 var chart9 = new ApexCharts(
@@ -2402,7 +2402,7 @@ var options11 = {
     },
     series: [44, 55, 67, 83],
     labels: ['Apples', 'Oranges', 'Bananas', 'Berries'],
-    colors:[ CubaAdminConfig.secondary , '#51bb25', '#f8d62b', CubaAdminConfig.primary ]
+    colors:[ CubaAdminConfig.secondary , '#51bb25', '#e1a729', CubaAdminConfig.primary ]
 
 
 }

@@ -1,5 +1,5 @@
 @extends('admin.layouts.master')
-@section('title', 'Contact Us List')
+@section('title', 'Contact Forms List')
 
 @section('content')
     <div class="container-fluid">
@@ -13,7 +13,7 @@
             <div class="col-sm-12">
                 <div class="card">
                     <div class="card-header">
-                        <h5>Contact Us List</h5>
+                        <h5>Contact Forms List</h5>
                     </div>
                     <div class="card-body">
                         <table class="table">

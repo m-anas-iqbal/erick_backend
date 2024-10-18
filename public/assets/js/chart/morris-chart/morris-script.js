@@ -283,7 +283,7 @@ var morris_chart = {
                     }],
                 backgroundColor: "rgba(68, 102, 242, 0.5)",
                 labelColor: "#999999",
-                colors: [CubaAdminConfig.primary , CubaAdminConfig.secondary ,"#f8d62b" ,"#51bb25" ,"rgba(248, 214, 43, 1)", "#51bb25" ,"#f8d62b"],
+                colors: [CubaAdminConfig.primary , CubaAdminConfig.secondary ,"#e1a729" ,"#51bb25" ,"rgba(248, 214, 43, 1)", "#51bb25" ,"#e1a729"],
                 formatter: function(a) {
                     return a + "%"
                 }
@@ -373,7 +373,7 @@ var morris_chart = {
                 xkey: "x",
                 ykeys: ["y", "z", "a"],
                 labels: ["A", "Y", "Z"],
-                barColors: [CubaAdminConfig.primary , CubaAdminConfig.secondary ,"#51bb25" ,"#f8d62b" ,"#a927f9", CubaAdminConfig.secondary , CubaAdminConfig.primary ],
+                barColors: [CubaAdminConfig.primary , CubaAdminConfig.secondary ,"#51bb25" ,"#e1a729" ,"#a927f9", CubaAdminConfig.secondary , CubaAdminConfig.primary ],
                 stacked: !0
             });
         });

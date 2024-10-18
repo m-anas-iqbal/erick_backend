@@ -271,7 +271,7 @@ $(function() {
 
                         borderWidth: 0
                     },
-                    colors: [CubaAdminConfig.primary, "#f8d62b" ,"#a927f9" ,"#51bb25" , CubaAdminConfig.secondary , "#dc3545" ,"#f8d62b"]
+                    colors: [CubaAdminConfig.primary, "#e1a729" ,"#a927f9" ,"#51bb25" , CubaAdminConfig.secondary , "#dc3545" ,"#e1a729"]
 
                 });
             }
@@ -394,7 +394,7 @@ $(function() {
         var data = [
             {color: "#f73164", points: data1_points, data: data1, label: "data1"},
             {color: "#a927f9",  points: data2_points, data: data2, label: "data2"},
-            {color: "#f8d62b", lines: {show: true}, points: data3_points, data: data3, label: "data3"},
+            {color: "#e1a729", lines: {show: true}, points: data3_points, data: data3, label: "data3"},
             {color: "#7366ff", bars: {show: true, align: "center", barWidth: 0.25}, data: data4, label: "data4"},
             {color: "#51bb25", points: data3_points, data: data4_errors}
             ];
@@ -444,7 +444,7 @@ $(function() {
                 show: true
             }
         },
-        colors: [ CubaAdminConfig.primary , "#51bb25" ,"#f8d62b" ,"#a927f9" ,"#dc3545", "#6c757d" , CubaAdminConfig.secondary ]
+        colors: [ CubaAdminConfig.primary , "#51bb25" ,"#e1a729" ,"#a927f9" ,"#dc3545", "#6c757d" , CubaAdminConfig.secondary ]
     });
     $.plot('#default-pie-legend-flot-chart', data, {
         series: {
@@ -455,7 +455,7 @@ $(function() {
         legend: {
             show: false
         },
-        colors: [CubaAdminConfig.primary , "#51bb25" ,"#f8d62b" ,"#a927f9" ,"#dc3545", "#6c757d" , CubaAdminConfig.secondary]
+        colors: [CubaAdminConfig.primary , "#51bb25" ,"#e1a729" ,"#a927f9" ,"#dc3545", "#6c757d" , CubaAdminConfig.secondary]
     });
     $.plot('#hidden-label-radius-flot-chart', data, {
         series: {
@@ -472,7 +472,7 @@ $(function() {
         legend: {
             show: false
         },
-        colors: [CubaAdminConfig.primary , "#51bb25" ,"#f8d62b" ,"#a927f9" ,"#dc3545", "#6c757d" , CubaAdminConfig.secondary]
+        colors: [CubaAdminConfig.primary , "#51bb25" ,"#e1a729" ,"#a927f9" ,"#dc3545", "#6c757d" , CubaAdminConfig.secondary]
     });
     $.plot('#default-pie-flot-chart-hover', data, {
         series: {
@@ -484,7 +484,7 @@ $(function() {
             hoverable: true,
             clickable: true
         },
-        colors: [CubaAdminConfig.primary , "#51bb25" ,"#f8d62b" ,"#a927f9" ,"#dc3545", "#6c757d" , CubaAdminConfig.secondary]
+        colors: [CubaAdminConfig.primary , "#51bb25" ,"#e1a729" ,"#a927f9" ,"#dc3545", "#6c757d" , CubaAdminConfig.secondary]
     });
     $.plot('#custom-label1pie', data, {
         series: {
@@ -503,7 +503,7 @@ $(function() {
         legend: {
             show: false
         },
-        colors: [CubaAdminConfig.primary , "#51bb25" ,"#f8d62b" ,"#a927f9" ,"#dc3545", "#6c757d" , CubaAdminConfig.secondary]
+        colors: [CubaAdminConfig.primary , "#51bb25" ,"#e1a729" ,"#a927f9" ,"#dc3545", "#6c757d" , CubaAdminConfig.secondary]
     });
     $.plot('#label-radius-flot-chart', data, {
         series: {
@@ -522,7 +522,7 @@ $(function() {
         legend: {
             show: false
         },
-        colors: [CubaAdminConfig.primary , "#51bb25" ,"#f8d62b" ,"#a927f9" ,"#dc3545", "#6c757d" , CubaAdminConfig.secondary]
+        colors: [CubaAdminConfig.primary , "#51bb25" ,"#e1a729" ,"#a927f9" ,"#dc3545", "#6c757d" , CubaAdminConfig.secondary]
     });
     $.plot('#title-pie-flot-chart', data, {
         series: {
@@ -546,7 +546,7 @@ $(function() {
         legend: {
             show: false
         },
-        colors: [CubaAdminConfig.primary , "#51bb25" ,"#f8d62b" ,"#a927f9" ,"#dc3545", "#6c757d" , CubaAdminConfig.secondary]
+        colors: [CubaAdminConfig.primary , "#51bb25" ,"#e1a729" ,"#a927f9" ,"#dc3545", "#6c757d" , CubaAdminConfig.secondary]
     });
     $.plot('#dount-hole-flot-chart', data, {
         series: {
@@ -555,7 +555,7 @@ $(function() {
                 show: true
             }
         },
-        colors: [CubaAdminConfig.primary , "#51bb25" ,"#f8d62b" ,"#a927f9" ,"#dc3545", "#6c757d" , CubaAdminConfig.secondary]
+        colors: [CubaAdminConfig.primary , "#51bb25" ,"#e1a729" ,"#a927f9" ,"#dc3545", "#6c757d" , CubaAdminConfig.secondary]
     });
 });
 

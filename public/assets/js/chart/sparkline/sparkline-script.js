@@ -74,7 +74,7 @@
         fillColor: 'rgba(247, 49, 100, 0.30)',
         highlightLineColor: 'rgba(247, 49, 100, 0.30)',
         highlightSpotColor: 'rgba(247, 49, 100, 0.8)'
-        
+
     });
     $("#custom-line-chart").sparkline([0, 5, 10, 7, 25, 20, 30], {
         type: 'line',
@@ -118,7 +118,7 @@ var sparkline_chart = {
         type: 'pie',
         width: '100%',
         height: '100%',
-        sliceColors: ['#51bb25','#f8d62b', CubaAdminConfig.secondary , CubaAdminConfig.primary ],
+        sliceColors: ['#51bb25','#e1a729', CubaAdminConfig.secondary , CubaAdminConfig.primary ],
         tooltipClassname: 'chart-sparkline'
     });
     }

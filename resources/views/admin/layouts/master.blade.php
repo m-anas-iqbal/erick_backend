@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {{-- <link rel="icon" href="{{ asset('assets/images/logo2.png') }}" type="image/x-icon">
     <link rel="shortcut icon" href="{{ asset('assets/images/logo2.png') }}" type="image/x-icon"> --}}
-    <title>BREWERY</title>
+    <title>Elite National Benefits</title>
 
 
     <link href="https://fonts.googleapis.com/css?family=Rubik:400,400i,500,500i,700,700i&amp;display=swap"
