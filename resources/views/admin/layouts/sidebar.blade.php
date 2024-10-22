@@ -73,14 +73,14 @@
 
                     <li class="sidebar-list">
                         <label class="badge badge-success"></label><a
-                            class="sidebar-link sidebar-title {{ request()->route()->uri == '/admin/feeds' ? 'active1' : '' }}"
+                            class="sidebar-link sidebar-title {{ request()->route()->uri == 'admin/feeds' ? 'active1' : '' }}"
                             href="{{ url('/admin/feeds') }}"> <span class="lan-3">&nbsp&nbsp Videos Managment</span>
 
                         </a>
                     </li>
                     <li class="sidebar-list">
                         <label class="badge badge-success"></label><a
-                            class="sidebar-link sidebar-title {{ request()->route()->uri == '/admin/pdf' ? 'active1' : '' }}"
+                            class="sidebar-link sidebar-title {{ request()->route()->uri == 'admin/pdf' ? 'active1' : '' }}"
                             href="{{ url('/admin/pdf') }}"> <span class="lan-3">&nbsp&nbsp PDF Managment</span>
 
                         </a>

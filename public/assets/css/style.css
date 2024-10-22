@@ -9641,6 +9641,9 @@ table.dataTable.display tbody tr.odd > .sorting_1 {
 .animate-chk label:last-child {
     margin-bottom: 0;
 }
+.sidebar-list{
+    margin: 5px 0px;
+}
 .checkbox_animated {
     cursor: pointer;
     position: relative;
@@ -41185,7 +41188,7 @@ body[class*="dark-"] .for-light {
     .simplebar-content
     > li.sidebar-list:hover
     > a:hover {
-    background-color: rgba(115, 102, 255, 0.12);
+    background-color: rgb(187 158 101 / 41%);
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
 }
