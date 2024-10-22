@@ -25,7 +25,7 @@
                                     <th>Phone</th>
                                     <th>Subject</th>
                                     <th>Service</th>
-                                    <th>Description</th>
+                                    <th>Message</th>
                                     {{-- <th>Actions</th> --}}
                                 </tr>
                             </thead>

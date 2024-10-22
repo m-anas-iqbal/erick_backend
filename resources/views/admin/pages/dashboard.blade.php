@@ -10,7 +10,7 @@
 @section('content')
     <div class="container-fluid">
         <div class="row size-column">
-            <div class="col-xl-7 box-col-12 xl-100">
+            <div class="col-xl-12 box-col-12 xl-100">
                 <div class="row dash-chart">
 
                     <div class="row">

@@ -64,12 +64,12 @@
                                                             <div class="col-md-6 py-2 border-bottom">
                                                                 <p><strong>Contact Number:</strong> {{ $qoutation->contact_number ?? 'N/A' }}</p>
                                                             </div>
-                                                            <div class="col-md-6 py-2 border-bottom">
+                                                            {{-- <div class="col-md-6 py-2 border-bottom">
                                                                 <p><strong>Date of Birth:</strong> {{ $qoutation->date_of_birth ?? 'N/A' }}</p>
-                                                            </div>
-                                                            <div class="col-md-6 py-2 border-bottom">
+                                                            </div> --}}
+                                                            {{-- <div class="col-md-6 py-2 border-bottom">
                                                                 <p><strong>Gender:</strong> {{ $qoutation->gender ?? 'N/A' }}</p>
-                                                            </div>
+                                                            </div> --}}
                                                             <div class="col-md-6 py-2 border-bottom">
                                                                 <p><strong>Occupation:</strong> {{ $qoutation->occupation ?? 'N/A' }}</p>
                                                             </div>
@@ -85,9 +85,9 @@
                                                             <div class="col-md-6 py-2 border-bottom">
                                                                 <p><strong>Coverage Amount:</strong> {{ $qoutation->coverage_amount ?? 'N/A' }}</p>
                                                             </div>
-                                                            <div class="col-md-6 py-2 border-bottom">
+                                                            {{-- <div class="col-md-6 py-2 border-bottom">
                                                                 <p><strong>Premium Payment:</strong> {{ $qoutation->premium_payment ?? 'N/A' }}</p>
-                                                            </div>
+                                                            </div> --}}
                                                         </div>
                                                     </div>
                                                 </div>

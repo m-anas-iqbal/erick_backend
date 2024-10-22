@@ -32,6 +32,7 @@
                             </thead>
                             <tbody>
                                 @foreach ($users as $user)
+                                @if($user->role_id ==2)
                                     <tr>
                                         <td>{{ $user->first_name }}</td>
                                         <td>{{ $user->last_name }}</td>
@@ -47,11 +48,13 @@
                                             </form>
                                         </td>
                                     </tr>
+                                @endif
+
                                 @endforeach
                             </tbody>
                         </table>
                     </div>
-                   
+
 
                 </div>
             </div>
