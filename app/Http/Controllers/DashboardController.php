@@ -72,7 +72,7 @@ class DashboardController extends Controller
         }
         // Check if password is provided and update it
         if ($request->filled('password')) {
-            $edit->password = Hash::make($req->password);
+            $edit->password = Hash::make($request->password);
         }
 
         // Save the changes

@@ -38,9 +38,9 @@ class ApiController extends Controller
     }
     public function contact(Request $request)
     {
+        // dd($request->all());
         // Create a new contact inquiry without validation
         $contactUs = ContactUs::create($request->all());
-
         // Return a success response
         return response()->json(['message' => 'Contact inquiry submitted successfully!', 'data' => $contactUs], 200);
     }
