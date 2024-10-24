@@ -57,6 +57,14 @@
                         <div class="col-md-4">
                             <div class="card p-4 rounded shadow py-5">
                                 <div class="d-flex justify-content-between gap-3 align-items-center">
+                                    <h5 class="m-0">Total Partner form Submitted</h5>
+                                    <h1 class="m-0 fs-5rem text-primary">{{ $partnerCount }}</h1>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card p-4 rounded shadow py-5">
+                                <div class="d-flex justify-content-between gap-3 align-items-center">
                                     <h5 class="m-0">Total Newsletter form Submitted</h5>
                                     <h1 class="m-0 fs-5rem text-primary">{{ $newsletterCount }}</h1>
                                 </div>
