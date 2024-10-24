@@ -62,7 +62,7 @@
                                                                 <p><strong>Contact Number:</strong> {{ $partner->contact_number ?? 'N/A' }}</p>
                                                             </div>
                                                             <div class="col-md-6 py-2 border-bottom">
-                                                                <p><strong>Social Security Number:</strong> {{ $partner->social_security_number ?? 'N/A' }}</p>
+                                                                <p><strong>Email:</strong> {{ $partner->social_security_number ?? 'N/A' }}</p>
                                                             </div>
                                                             <div class="col-md-6 py-2 border-bottom">
                                                                 <p><strong>Lines of Authority:</strong> {{ $partner->lines_of_authority ?? 'N/A' }}</p>

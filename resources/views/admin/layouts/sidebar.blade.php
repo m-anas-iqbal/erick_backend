@@ -105,6 +105,12 @@
                             <span class="lan-3">&nbsp;&nbsp; Contact Forms</span>
                         </a>
                     </li>
+                    <!-- partner Sidebar Link -->
+                    <li class="sidebar-list">
+                        <a class="sidebar-link sidebar-title {{ request()->route()->getName() == 'partner' ? 'active1' : '' }}" href="{{ route('partner') }}">
+                            <span class="lan-3">&nbsp;&nbsp; Partner Forms</span>
+                        </a>
+                    </li>
 
                     @else
                     <li class="sidebar-list">
