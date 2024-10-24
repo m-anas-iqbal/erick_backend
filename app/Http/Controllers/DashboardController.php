@@ -9,6 +9,7 @@ use App\Models\PdfFeed;
 use App\Models\Qoutation;
 use App\Models\Newsletter;
 use App\Models\Contactus;
+use App\Models\Partner;
 use Illuminate\Support\Facades\Crypt;
 use App\Helper\Helper; // Import the Helper class
 
@@ -31,6 +32,7 @@ class DashboardController extends Controller
     public function adminDashboard()
     {
         $data['feedsCount'] = Feeds::count();
+        $data['partnerCount'] = Partner::count();
         $data['pdfCount'] =   PdfFeed::count();
         $data['userCount'] = User::where('role_id',2)->count();
         $data['contactCount'] = Contactus::count();
@@ -98,5 +100,10 @@ class DashboardController extends Controller
     {
         $qoutations = Qoutation::orderBy('id','desc')->get(); // Adjust pagination as needed
         return view('admin.pages.qoutation.list', compact('qoutations'));
+    }
+    public function partner()
+    {
+        $partners = Partner::orderBy('id','desc')->get(); // Adjust pagination as needed
+        return view('admin.pages.partner.list', compact('partners'));
     }
 }

@@ -54,7 +54,7 @@ Route::delete('pdf/{id}', [PdfFeedController::class, 'destroy'])->name('pdf.dest
 Route::get('/qoutation',  [DashboardController::class, 'qoutation'])->name('qoutation');
 Route::get('/newsletter',  [DashboardController::class, 'newsletter'])->name('newsletter');
 Route::get('/contact',  [DashboardController::class, 'contact'])->name('contact');
-Route::get('/partner',  [DashboardController::class, 'contact'])->name('partner');
+Route::get('/partner',  [DashboardController::class, 'partner'])->name('partner');
 Route::get('/dashboard',  [DashboardController::class, 'adminDashboard'])->name('dashboard');
 });
 
