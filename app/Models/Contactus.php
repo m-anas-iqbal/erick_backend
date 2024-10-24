@@ -15,6 +15,6 @@ class Contactus extends Model
         'service',
         'email',
         'phone',
-        'description',
+        'decription',
     ];
 }
