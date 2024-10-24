@@ -20,3 +20,4 @@ use App\Http\Controllers\ApiController;
 Route::post('/front/qoutation', [ApiController::class, 'qoutation']);
 Route::post('/front/newsletter', [ApiController::class, 'newsletter']);
 Route::post('/front/contact', [ApiController::class, 'contact']);
+Route::post('/front/partner', [ApiController::class, 'partner']);
