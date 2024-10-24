@@ -38,7 +38,7 @@
                                         <td>{{ $contact->phone ?? 'N/A' }}</td>
                                         <td>{{ $contact->subject ?? 'N/A' }}</td>
                                         <td>{{ $contact->service ?? 'N/A' }}</td>
-                                        <td>{{ $contact->description ?? 'N/A' }}</td>
+                                        <td>{{ $contact->decription ?? 'N/A' }}</td>
                                         {{-- <td>
                                             <a href="{{ route('contactus.edit', $contact->id) }}" class="btn btn-warning">Edit</a>
                                             <form action="{{ route('contactus.destroy', $contact->id) }}" method="POST" style="display:inline;">
