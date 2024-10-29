@@ -71,7 +71,7 @@
                                                 <label class="col-form-label">Profile Image</label>
                                                 <input class="form-control" id="image" name="image" type="file" accept="image/*">
                                                 @if($profile->image)
-                                                    <img src="{{ asset('storage/' . $profile->image) }}" alt="Profile Image" class="mt-2" width="100">
+                                                    <img src="{{ $profile->image }}" alt="Profile Image" class="mt-2" width="100">
                                                 @endif
                                             </div>
                                         </div>
