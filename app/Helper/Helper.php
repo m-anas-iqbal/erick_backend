@@ -14,7 +14,7 @@ class Helper
      * @param string $folder
      * @return string|null
      */
-    function upload_video($request,$fieldName, $folder = 'feeds/videos')
+    static function upload_video($request,$fieldName, $folder = 'feeds/videos')
     {
         ini_set('post_max_size', '20000M');
         ini_set('upload_max_filesize', '20000M');
